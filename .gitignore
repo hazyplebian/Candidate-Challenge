@@ -12,8 +12,7 @@ dist
 dist-ssr
 *.local
 # Environmental variables
-.env
-
+./candidate/src/.env
 
 # Editor directories and files
 .vscode/*
