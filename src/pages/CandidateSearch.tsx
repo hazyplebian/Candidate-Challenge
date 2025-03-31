@@ -24,9 +24,9 @@ const CandidateSearch: React.FC = () => {
   useEffect(() => {
     const fetchCandidateDetails = async () => {
       if (candidates.length > 0 && currentIndex < candidates.length) {
-        const Candidate = candidates[currentIndex];
+        const candidate = candidates[currentIndex];
         try {
-          const details = await searchGithubUser(Candidate.login);
+          const details = await searchGithubUser(candidate.login);
           setCurrentCandidate(details);
         } catch (error) {
           console.error('Error fetching candidate details:', error);
@@ -34,7 +34,7 @@ const CandidateSearch: React.FC = () => {
       }
     };
     fetchCandidateDetails();
-  }, [currentIndex, candidates]);
+  }, [candidates, currentIndex]);
   const handleNext =  () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % candidates.length);
   };
@@ -43,8 +43,8 @@ const CandidateSearch: React.FC = () => {
       const saved = JSON.parse(localStorage.getItem('savedCandidates') || '[]') as Candidate[];
       saved.push(currentCandidate);
       localStorage.setItem('savedCandidates', JSON.stringify(saved));
-      handleNext();
     }
+      handleNext();
   };
 
   return (
