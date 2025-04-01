@@ -8,6 +8,7 @@ export interface Candidate {
 	location?: string;
 	email?: string;
 	company?: string;
+	bio: string;
   }
 
 
