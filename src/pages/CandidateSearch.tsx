@@ -65,6 +65,7 @@ const CandidateSearch: React.FC = () => {
           <p><strong>Location:</strong> {currentCandidate.location || 'N/A'}</p>
           <p><strong>Email:</strong> {currentCandidate.email || 'N/A'}</p>
           <p><strong>Company:</strong> {currentCandidate.company || 'N/A'}</p>
+          <p><strong>Bio:</strong> {currentCandidate.bio || 'N/A'}</p>
           <div className="button-group">
             <button className="reject-button" onClick={handleNext}>-</button>
             <button className="accept-button" onClick={handleAccept}>+</button>

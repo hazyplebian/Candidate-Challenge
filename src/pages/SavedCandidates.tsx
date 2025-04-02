@@ -64,6 +64,7 @@ const SavedCandidates: React.FC = () => {
               <th>Location</th>
               <th>Email</th>
               <th>Company</th>
+              <th>Bio</th>
               <th>Reject</th>
             </tr>
           </thead>
@@ -85,6 +86,7 @@ const SavedCandidates: React.FC = () => {
                 <td>{candidate.location || 'N/A'}</td>
                 <td>{candidate.email || 'N/A'}</td>
                 <td>{candidate.company || 'N/A'}</td>
+                <td>{candidate.bio || 'N/A'}</td>
                 <td>
                   <button
                     className="reject-button-table"
