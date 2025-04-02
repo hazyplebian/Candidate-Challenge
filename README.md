@@ -1,33 +1,56 @@
-# React + TypeScript + Vite
+![License](https://img.shields.io/badge/License-BSD-blue.svg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Candidate Search is a web application that calls the GitHub API and renders candidate data in the browser. Employers can review potential candidates by viewing detailed profiles—including the candidate's name, username, location, avatar, email, GitHub URL, and company. The application's API for retrieving candidate data is already provided; your task is to complete the front end using TypeScript, integrate with the API, and deploy the entire application on Render.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Deployment](#deployment)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+To install this project, clone the repository and run the following command in the terminal to install dependencies:
 
-## Expanding the ESLint configuration
+Before you start, download and unzip the starter code and create your own repository with these files.
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Additionally, create a `.env` file in the environment folder and add your GitHub Personal Access Token to increase the API rate limit:
 
-* Configure the top-level `parserOptions` property as follows:
+## Usage
+Invoke the application from the command line using: npm run build, npm run dev
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Complete the front end by finalizing the CandidateSearch and SavedCandidates pages, creating any necessary components, and utilizing local storage to persist accepted candidates. The application retrieves candidate data via the provided API located at `./Develop/src/api/API.tsx`.
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+## Screenshot
+![alt text](<assets/Screenshot 2025-04-02 003453.png>)
+![alt text](<assets/Screenshot 2025-04-02 003512.png>)
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Deployment
+Deployment URL: https://candidate-challenge-1.onrender.com
+
+## Contribution
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
+
+## Tests
+You can test the application by running:
+npm run dev
+
+Verify that:
+- The candidate search page loads with one candidate’s information (name, username, location, avatar, email, GitHub URL, and company).
+- Clicking the "+" button saves the current candidate to the list and displays the next candidate.
+- Clicking the "-" button shows the next candidate without saving the current one.
+- An appropriate message is displayed when there are no more candidates to review.
+- The list of accepted candidates persists across page reloads using local storage.
+
+## License
+This project is licensed under the BSD license.
+
+## Questions
+If you have any questions, please contact me at [michael.mangieri@yahoo.com](mailto:michael.mangieri@yahoo.com).
+
+You can find more of my work at [github.com/hazyplebian](https://github.com/hazyplebian)
+
